@@ -3,8 +3,24 @@
 3.git add .
 4.git commit -m "comment content"
 5.git push origin master
-6.git remote add origin https://github.com/doryukii/Welcome
+6.git remote add origin https://github.com/doryukii/Welcome    git remote remove origin #删除
 7.git pull origin master --allow-unrelated-histories #git 2.9.2及以后版本需要添加--allow-unrelated-histories
 8.git config --global core.quotepath false  #中文文件名论码问题解决命令
 9.git branch #查看分支
 10.git branch [branch name]  #创建分支
+11.git commit --amend --no-edit  #将本次修改提交到上次的修改中
+12.git log --oneline
+13.git status -s  #以精简的方式显示文件状态
+14.git reset filename 将add过后已变为staged状态的文件重置为unstaged状态
+15.git reset --hard HEAD  #返回上一次提交的状态
+16.git reset --hard HEAD^^^^
+17.git reset --hard HEAD~4
+18.git reset --hard 2a17846
+19.git reflog  #回到以前版本后又想返回未来，此命令用于显示未来的ID或者头指针
+20.git checkout c6762al --1.py  #单个文件回到以前版本，经add和commit后可同步到本地仓库
+21.git log --oneline --graph   #以图形形式显示分支log
+22.git checkout dev  # 切换到dev分支
+23.git branch -d dev  #删除dev分支（注意不能正处于dev分支而删除dev分支）
+24.git checkout -b dev #创建并切换到dev分支
+25.git commit -am "comment content" #add和commit相结合，不过要该文件已经在库中存在
+26.git merge --no-ff -m "keep merge info" dev #将dev分支与主分支合并
